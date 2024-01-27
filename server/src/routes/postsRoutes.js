@@ -1,9 +1,8 @@
 import express from 'express';
+import { getPosts } from '../controllers/posts.controller.js';
 
 const postRouter = express.Router();
 
-postRouter.get('/', (_, res) => {
-    res.send('Great!');
-})
+postRouter.get('/', getPosts)
 
 export { postRouter };
